@@ -123,13 +123,15 @@ export enum StoriesRole {
 export enum SupportedLanguage {
   JAVASCRIPT = 'JavaScript',
   SCHEME = 'Scheme',
-  PYTHON = 'Python'
+  PYTHON = 'Python',
+  GOLANG = 'Golang'
 }
 
 export const SUPPORTED_LANGUAGES = [
   SupportedLanguage.JAVASCRIPT,
   SupportedLanguage.SCHEME,
-  SupportedLanguage.PYTHON
+  SupportedLanguage.PYTHON,
+  SupportedLanguage.GOLANG
 ];
 
 /**
@@ -184,6 +186,14 @@ export const htmlLanguage: SALanguage = {
   variant: Variant.DEFAULT,
   displayName: 'HTML',
   mainLanguage: SupportedLanguage.JAVASCRIPT,
+  supports: {}
+};
+
+export const goLanguage: SALanguage = {
+  chapter: Chapter.GOLANG,
+  variant: Variant.DEFAULT,
+  displayName: 'Golang',
+  mainLanguage: SupportedLanguage.GOLANG,
   supports: {}
 };
 
@@ -274,6 +284,7 @@ export const isSourceLanguage = (chapter: Chapter) =>
   [Chapter.SOURCE_1, Chapter.SOURCE_2, Chapter.SOURCE_3, Chapter.SOURCE_4].includes(chapter);
 
 export const ALL_LANGUAGES: readonly SALanguage[] = [
+  goLanguage,
   ...sourceLanguages,
   fullJSLanguage,
   fullTSLanguage,

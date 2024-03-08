@@ -3,6 +3,7 @@ import { Ace, require as acequire, createEditSession } from 'ace-builds';
 import 'ace-builds/src-noconflict/ext-language_tools';
 import 'ace-builds/src-noconflict/ext-searchbox';
 import 'ace-builds/src-noconflict/ext-settings_menu';
+import 'ace-builds/src-noconflict/mode-golang';
 import 'js-slang/dist/editors/ace/theme/source';
 
 import * as AceBuilds from 'ace-builds';
@@ -658,7 +659,7 @@ const Editor: React.FC<EditorProps> = (props: EditorProps) => {
   const [sessions, setSessions] = React.useState<Record<string, Ace.EditSession>>({});
 
   // Create new edit session.
-  const defaultMode = acequire('ace/mode/javascript').Mode();
+  const defaultMode = acequire('ace/mode/golang').Mode();
   const defaultEditSession = createEditSession(props.editorValue, defaultMode);
 
   // Initialise edit session if file path has not been seen before.
