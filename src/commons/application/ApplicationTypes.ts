@@ -344,7 +344,25 @@ export const defaultPlayground: PlaygroundState = {
   languageConfig: defaultLanguageConfig
 };
 
-export const defaultEditorValue = '// Type your program in here!';
+export const defaultEditorValue = `// Type your program in here!
+import "fmt"
+func main() {
+    fmt.Println("Hello, World!")
+    
+    for i := 1; i <= 100; i++ {
+        switch {
+        case i%3 == 0 && i%5 == 0:
+            fmt.Println("FizzBuzz")
+        case i%3 == 0:
+            fmt.Println("Fizz")
+        case i%5 == 0:
+            fmt.Println("Buzz")
+        default:
+            fmt.Println(i)
+        }
+    }
+}
+`;
 
 /**
  * Create a default IWorkspaceState for 'resetting' a workspace.
