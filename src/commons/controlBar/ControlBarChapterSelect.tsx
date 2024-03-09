@@ -8,6 +8,7 @@ import React from 'react';
 import {
   fullJSLanguage,
   fullTSLanguage,
+  goLanguage,
   htmlLanguage,
   pyLanguages,
   SALanguage,
@@ -81,6 +82,7 @@ export const ControlBarChapterSelect: React.FC<ControlBarChapterSelectProps> = (
   const selectedLang = useTypedSelector(store => store.playground.languageConfig.mainLanguage);
 
   const choices = [
+    goLanguage,
     ...sourceLanguages,
     // Full JS/TS version uses eval(), which is a huge security risk, so we only enable
     // for public deployments. HTML, while sandboxed, is treated the same way to be safe.
