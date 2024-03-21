@@ -57,6 +57,7 @@
     "mdast-util-from-markdown": "^2.0.0",
     "mdast-util-to-hast": "^13.0.0",
     "moment": "^2.29.4",
+    "node-polyfill-webpack-plugin": "^3.0.0",
     "normalize.css": "^8.0.1",
     "phaser": "^3.55.2",
     "query-string": "^9.0.0",
