@@ -345,12 +345,12 @@ export const defaultPlayground: PlaygroundState = {
 };
 
 export const defaultEditorValue = `// Type your program in here!
-func main() {
-	var y = 1
-	{
-		y := 2
-	}
-	return y
+func main() (int) {
+  var y int = 1
+  {
+    y int := 2
+    return y
+  }
 }
 `;
 
