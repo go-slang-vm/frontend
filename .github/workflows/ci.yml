@@ -32,7 +32,7 @@ jobs:
       - name: Install dependencies
         run: |
           set -euo pipefail
-          yarn add "js-slang@git+https://x-oauth-basic:${{secrets.ACCESS_TOKEN}}@github.com/seancze/cs4215-go-slang.git"
+          yarn add "js-slang@git+https://x-oauth-basic:${{secrets.ACCESS_TOKEN}}@github.com/seancze/cs4215-go-slang"
           yarn install --frozen-lockfile
       - name: Run command
         run: yarn run ${{ matrix.commands }}
