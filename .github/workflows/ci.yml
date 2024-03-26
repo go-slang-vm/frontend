@@ -30,10 +30,12 @@ jobs:
           node-version: 20
           cache: yarn
       - name: Install dependencies
+        env:
+          ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
         run: |
           set -euo pipefail
           echo "ACCESS_TOKEN=${{ env.ACCESS_TOKEN }}"
-          yarn add "js-slang@git+https://${{env.ACCESS_TOKEN}}@github.com/seancze/cs4215-go-slang.git"
+          yarn add "js-slang@git+https://$ACCESS_TOKEN@github.com/seancze/cs4215-go-slang.git"
           yarn install --frozen-lockfile
       - name: Run command
         run: yarn run ${{ matrix.commands }}
