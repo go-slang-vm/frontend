@@ -24,11 +24,6 @@ jobs:
         env:
           ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
         run: echo "ACCESS_TOKEN=$ACCESS_TOKEN" >> $GITHUB_ENV
-      - name: Install dependencies (apt)
-        run: |
-          sudo apt-get update && \
-          sudo apt-get install -y --no-install-recommends \
-          libxi-dev libgl1-mesa-dev
       - name: Setup node
         uses: actions/setup-node@v4
         with:
