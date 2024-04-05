@@ -1157,7 +1157,7 @@ export function* evalCode(
 
   // Handles `console.log` statements in fullJS
   const detachConsole: () => void =
-    context.chapter === Chapter.FULL_JS
+    context.chapter === Chapter.FULL_JS || context.chapter === Chapter.GOLANG
       ? DisplayBufferService.attachConsole(workspaceLocation)
       : () => {};
 
