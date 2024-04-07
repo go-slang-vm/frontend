@@ -41,7 +41,7 @@ jobs:
         env:
           ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
         run: |
-          yarn
+          yarn install
       - name: Run command
         run: yarn run ${{ matrix.commands }}
       - name: Coveralls - Upload test coverage report
