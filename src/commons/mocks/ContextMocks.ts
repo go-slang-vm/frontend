@@ -1,10 +1,10 @@
-import { parse } from 'acorn';
-import { FunctionExpression, Node } from 'estree';
 import { ACORN_PARSE_OPTIONS } from '@seancze/js-slang/dist/constants';
 import createContext, { EnvTree } from '@seancze/js-slang/dist/createContext';
 import Closure from '@seancze/js-slang/dist/interpreter/closure';
 import { Context, Environment } from '@seancze/js-slang/dist/types';
 import { TypeError } from '@seancze/js-slang/dist/utils/rttc';
+import { parse } from 'acorn';
+import { FunctionExpression, Node } from 'estree';
 
 export function mockContext(chapter = 1): Context {
   return createContext(chapter);

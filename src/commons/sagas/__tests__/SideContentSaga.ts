@@ -1,6 +1,6 @@
 import { IconNames } from '@blueprintjs/icons';
-import type { MockedFunction } from 'jest-mock';
 import { Context } from '@seancze/js-slang';
+import type { MockedFunction } from 'jest-mock';
 import { expectSaga } from 'redux-saga-test-plan';
 import * as sideContentHelper from 'src/commons/sideContent/SideContentHelper';
 import { SideContentReducer } from 'src/commons/sideContent/SideContentReducer';

@@ -1,5 +1,5 @@
-import { SlingClient } from '@sourceacademy/sling-client';
 import { Chapter } from '@seancze/js-slang/dist/types';
+import { SlingClient } from '@sourceacademy/sling-client';
 import { ExternalLibraryName } from 'src/commons/application/types/ExternalTypes';
 import { WorkspaceLocation } from 'src/commons/workspace/WorkspaceTypes';
 

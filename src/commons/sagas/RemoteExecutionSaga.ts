@@ -1,7 +1,7 @@
-import { SlingClient } from '@sourceacademy/sling-client';
 import { assemble, compileFiles, Context } from '@seancze/js-slang';
 import { ExceptionError } from '@seancze/js-slang/dist/errors/errors';
 import { Chapter, Variant } from '@seancze/js-slang/dist/types';
+import { SlingClient } from '@sourceacademy/sling-client';
 import _ from 'lodash';
 import { SagaIterator } from 'redux-saga';
 import { call, put, race, select, take } from 'redux-saga/effects';

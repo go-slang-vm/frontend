@@ -1,6 +1,6 @@
-import * as es from 'estree';
 import { Control } from '@seancze/js-slang/dist/cse-machine/interpreter';
 import { ControlItem, Instr } from '@seancze/js-slang/dist/cse-machine/types';
+import * as es from 'estree';
 import { KonvaEventObject } from 'konva/lib/Node';
 import React from 'react';
 import { Group, Label, Tag, Text } from 'react-konva';
