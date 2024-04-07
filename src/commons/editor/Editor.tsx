@@ -4,10 +4,10 @@ import 'ace-builds/src-noconflict/ext-language_tools';
 import 'ace-builds/src-noconflict/ext-searchbox';
 import 'ace-builds/src-noconflict/ext-settings_menu';
 import 'ace-builds/src-noconflict/mode-golang';
-import 'js-slang/dist/editors/ace/theme/source';
+import '@seancze/js-slang/dist/editors/ace/theme/source';
 
 import * as AceBuilds from 'ace-builds';
-import { Chapter, Variant } from 'js-slang/dist/types';
+import { Chapter, Variant } from '@seancze/js-slang/dist/types';
 import React from 'react';
 import AceEditor, { IAceEditorProps, IEditorProps } from 'react-ace';
 import { HotKeys } from 'react-hotkeys';

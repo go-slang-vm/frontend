@@ -10,7 +10,7 @@ import {
 import { IconNames } from '@blueprintjs/icons';
 import { GetResponseTypeFromEndpointMethod } from '@octokit/types';
 import classNames from 'classnames';
-import { Chapter, Variant } from 'js-slang/dist/types';
+import { Chapter, Variant } from '@seancze/js-slang/dist/types';
 import { isEqual } from 'lodash';
 import React, { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { useDispatch } from 'react-redux';

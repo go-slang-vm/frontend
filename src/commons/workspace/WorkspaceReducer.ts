@@ -1,5 +1,5 @@
 import { createReducer } from '@reduxjs/toolkit';
-import { stringify } from 'js-slang/dist/utils/stringify';
+import { stringify } from '@seancze/js-slang/dist/utils/stringify';
 import { Reducer } from 'redux';
 
 import { SourcecastReducer } from '../../features/sourceRecorder/sourcecast/SourcecastReducer';
@@ -462,7 +462,7 @@ const oldWorkspaceReducer: Reducer<WorkspaceManagerState> = (
       /**
        * Set the isRunning property of the
        * context to false, to ensure a re-render.
-       * Also in case the async js-slang interrupt()
+       * Also in case the async @seancze/js-slang interrupt()
        * function does not finish interrupting before
        * this action is called.
        */
@@ -524,7 +524,7 @@ const oldWorkspaceReducer: Reducer<WorkspaceManagerState> = (
 
     /**
      * Resets the workspace to default settings,
-     * including the js-slang Context. Apply
+     * including the @seancze/js-slang Context. Apply
      * any specified settings (workspaceOptions)
      */
     case RESET_WORKSPACE:

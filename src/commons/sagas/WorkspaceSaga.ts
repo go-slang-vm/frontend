@@ -9,13 +9,13 @@ import {
   resume,
   runFilesInContext,
   runInContext
-} from 'js-slang';
-import { ACORN_PARSE_OPTIONS, TRY_AGAIN } from 'js-slang/dist/constants';
-import { defineSymbol } from 'js-slang/dist/createContext';
-import { InterruptedError } from 'js-slang/dist/errors/errors';
-import { parse } from 'js-slang/dist/parser/parser';
-import { manualToggleDebugger } from 'js-slang/dist/stdlib/inspector';
-import { Chapter, Variant } from 'js-slang/dist/types';
+} from '@seancze/js-slang';
+import { ACORN_PARSE_OPTIONS, TRY_AGAIN } from '@seancze/js-slang/dist/constants';
+import { defineSymbol } from '@seancze/js-slang/dist/createContext';
+import { InterruptedError } from '@seancze/js-slang/dist/errors/errors';
+import { parse } from '@seancze/js-slang/dist/parser/parser';
+import { manualToggleDebugger } from '@seancze/js-slang/dist/stdlib/inspector';
+import { Chapter, Variant } from '@seancze/js-slang/dist/types';
 import { random } from 'lodash';
 import Phaser from 'phaser';
 import { SagaIterator } from 'redux-saga';

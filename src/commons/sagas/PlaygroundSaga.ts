@@ -1,5 +1,5 @@
 import { FSModule } from 'browserfs/dist/node/core/FS';
-import { Chapter, Variant } from 'js-slang/dist/types';
+import { Chapter, Variant } from '@seancze/js-slang/dist/types';
 import { compressToEncodedURIComponent } from 'lz-string';
 import qs from 'query-string';
 import { SagaIterator } from 'redux-saga';

@@ -1,6 +1,6 @@
 import { createAction } from '@reduxjs/toolkit';
-import { Context } from 'js-slang';
-import { Chapter, Variant } from 'js-slang/dist/types';
+import { Context } from '@seancze/js-slang';
+import { Chapter, Variant } from '@seancze/js-slang/dist/types';
 
 import { SET_IS_EDITOR_READONLY } from '../../features/sourceRecorder/sourcecast/SourcecastTypes';
 import { SALanguage } from '../application/ApplicationTypes';
@@ -136,7 +136,7 @@ export const toggleEditorAutorun = createAction(
 );
 
 /**
- * Starts the process to clear the js-slang Context
+ * Starts the process to clear the @seancze/js-slang Context
  * at a specified workspace location.
  *
  * This action is to be handled by saga, in order to
@@ -171,7 +171,7 @@ export const clearReplOutputLast = createAction(
 );
 
 /**
- * Finishes the process to clear the js-slang Context
+ * Finishes the process to clear the @seancze/js-slang Context
  * at a specified workspace location.
  *
  * This action is to be handled in the reducer, to call the reset on the

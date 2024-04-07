@@ -1,4 +1,4 @@
-import { Chapter, Language, SourceError, Variant } from 'js-slang/dist/types';
+import { Chapter, Language, SourceError, Variant } from '@seancze/js-slang/dist/types';
 
 import { AcademyState } from '../../features/academy/AcademyTypes';
 import { AchievementState } from '../../features/achievement/AchievementTypes';
@@ -356,7 +356,7 @@ func main() (int) {
 
 /**
  * Create a default IWorkspaceState for 'resetting' a workspace.
- * Takes in parameters to set the js-slang library and chapter.
+ * Takes in parameters to set the @seancze/js-slang library and chapter.
  *
  * @param workspaceLocation the location of the workspace, used for context
  */

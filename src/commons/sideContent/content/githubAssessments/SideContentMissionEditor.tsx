@@ -1,5 +1,5 @@
 import { Label } from '@blueprintjs/core';
-import { Chapter } from 'js-slang/dist/types';
+import { Chapter } from '@seancze/js-slang/dist/types';
 import React from 'react';
 import classes from 'src/styles/GithubAssessments.module.scss';
 

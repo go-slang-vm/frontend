@@ -2057,6 +2057,29 @@
   resolved "https://registry.yarnpkg.com/@rushstack/eslint-patch/-/eslint-patch-1.2.0.tgz#8be36a1f66f3265389e90b5f9c9962146758f728"
   integrity sha512-sXo/qW2/pAcmT43VoRKOJbDOfV3cYpq3szSVfIThQXNt+E4DfKj361vaAt3c88U5tPUxzEswam7GW48PJqtKAg==
 
+"@seancze/js-slang@^1.0.47":
+  version "1.0.47"
+  resolved "https://registry.yarnpkg.com/@seancze/js-slang/-/js-slang-1.0.47.tgz#6cee1a406203a1cb32987e7ab3263e2cb8b1edac"
+  integrity sha512-3EcayajcJUYoXfVQUI+G43zRa+39ZpsRZDhAwL0qMpjj4moClUS80BliGQ6VER4TOl7pnBaOkKiYMmrJ4T64fQ==
+  dependencies:
+    "@babel/parser" "^7.19.4"
+    "@joeychenofficial/alt-ergo-modified" "^2.4.0"
+    "@ts-morph/bootstrap" "^0.18.0"
+    "@types/estree" "0.0.52"
+    acorn "^8.8.2"
+    acorn-class-fields "^1.0.0"
+    acorn-loose "^8.0.0"
+    acorn-walk "^8.0.0"
+    antlr4ts "^0.5.0-alpha.4"
+    astring "^1.4.3"
+    gpu.js "^2.16.0"
+    js-base64 "^3.7.5"
+    lodash "^4.17.21"
+    node-getopt "^0.3.2"
+    source-map "0.7.3"
+    ts-node "^10.9.2"
+    xmlhttprequest-ts "^1.0.1"
+
 "@sentry-internal/feedback@7.99.0":
   version "7.99.0"
   resolved "https://registry.yarnpkg.com/@sentry-internal/feedback/-/feedback-7.99.0.tgz#c3fec1500cb24c9a5e09479d478fddca909477da"
@@ -3585,6 +3608,11 @@ ansi-styles@^6.2.1:
   version "6.2.1"
   resolved "https://registry.yarnpkg.com/ansi-styles/-/ansi-styles-6.2.1.tgz#0e62320cf99c21afff3b3012192546aacbfb05c5"
   integrity sha512-bN798gFfQX+viw3R7yrGWRqnrN2oRkEkUjjl4JNn4E8GxxbjtG3FbrEIIY3l8/hrwUwIeCZvi4QuOTP4MErVug==
+
+antlr4ts@^0.5.0-alpha.4:
+  version "0.5.0-alpha.4"
+  resolved "https://registry.yarnpkg.com/antlr4ts/-/antlr4ts-0.5.0-alpha.4.tgz#71702865a87478ed0b40c0709f422cf14d51652a"
+  integrity sha512-WPQDt1B74OfPv/IMS2ekXAKkTZIHl88uMetg6q3OTqgFxZ/dxDXI0EWLyZid/1Pe6hTftyg5N7gel5wNAGxXyQ==
 
 anymatch@^3.0.3, anymatch@~3.1.2:
   version "3.1.3"
@@ -8648,27 +8676,6 @@ js-sdsl@4.3.0, js-sdsl@^4.1.4:
   resolved "https://registry.yarnpkg.com/js-sdsl/-/js-sdsl-4.3.0.tgz#aeefe32a451f7af88425b11fdb5f58c90ae1d711"
   integrity sha512-mifzlm2+5nZ+lEcLJMoBK0/IH/bDg8XnJfd/Wq6IP+xoCjLZsTOnV2QpxlVbX9bMnkl5PdEjNtBJ9Cj1NjifhQ==
 
-js-slang@^1.0.46:
-  version "1.0.46"
-  resolved "https://registry.yarnpkg.com/js-slang/-/js-slang-1.0.46.tgz#61b27f7a99ebe02c2f462e353d57a1593f2644ff"
-  integrity sha512-ogAJXNKGxbXk4y1FL/U9Jqt+SHKj9Ekn+xXffu+rs+FA07OcW0b6VElAL2z0sJr5tV88RWiC/1xJULr7aFnAiA==
-  dependencies:
-    "@babel/parser" "^7.19.4"
-    "@joeychenofficial/alt-ergo-modified" "^2.4.0"
-    "@ts-morph/bootstrap" "^0.18.0"
-    "@types/estree" "0.0.52"
-    acorn "^8.8.2"
-    acorn-class-fields "^1.0.0"
-    acorn-loose "^8.0.0"
-    acorn-walk "^8.0.0"
-    astring "^1.4.3"
-    gpu.js "^2.16.0"
-    js-base64 "^3.7.5"
-    lodash "^4.17.21"
-    node-getopt "^0.3.2"
-    source-map "0.7.3"
-    xmlhttprequest-ts "^1.0.1"
-
 "js-tokens@^3.0.0 || ^4.0.0", js-tokens@^4.0.0:
   version "4.0.0"
   resolved "https://registry.yarnpkg.com/js-tokens/-/js-tokens-4.0.0.tgz#19203fb59991df98e3a287050d4647cdeaf32499"
@@ -13146,6 +13153,25 @@ ts-node@^10.7.0:
   version "10.9.1"
   resolved "https://registry.yarnpkg.com/ts-node/-/ts-node-10.9.1.tgz#e73de9102958af9e1f0b168a6ff320e25adcff4b"
   integrity sha512-NtVysVPkxxrwFGUUxGYhfux8k78pQB3JqYBXlLRZgdGUqTO5wU/UyHop5p70iEbGhB7q5KmiZiU0Y3KlJrScEw==
+  dependencies:
+    "@cspotcode/source-map-support" "^0.8.0"
+    "@tsconfig/node10" "^1.0.7"
+    "@tsconfig/node12" "^1.0.7"
+    "@tsconfig/node14" "^1.0.0"
+    "@tsconfig/node16" "^1.0.2"
+    acorn "^8.4.1"
+    acorn-walk "^8.1.1"
+    arg "^4.1.0"
+    create-require "^1.1.0"
+    diff "^4.0.1"
+    make-error "^1.1.1"
+    v8-compile-cache-lib "^3.0.1"
+    yn "3.1.1"
+
+ts-node@^10.9.2:
+  version "10.9.2"
+  resolved "https://registry.yarnpkg.com/ts-node/-/ts-node-10.9.2.tgz#70f021c9e185bccdca820e26dc413805c101c71f"
+  integrity sha512-f0FFpIdcHgn8zcPSbf1dRevwt047YMnaiJM3u2w2RewrB+fob/zePZcrOyQoLMMO7aBIddLcQIEK5dYjkLnGrQ==
   dependencies:
     "@cspotcode/source-map-support" "^0.8.0"
     "@tsconfig/node10" "^1.0.7"

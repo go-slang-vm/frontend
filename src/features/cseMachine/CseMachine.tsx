@@ -1,5 +1,5 @@
-import { Context } from 'js-slang';
-import { Control, Stash } from 'js-slang/dist/cse-machine/interpreter';
+import { Context } from '@seancze/js-slang';
+import { Control, Stash } from '@seancze/js-slang/dist/cse-machine/interpreter';
 import React from 'react';
 
 import { Layout } from './CseMachineLayout';

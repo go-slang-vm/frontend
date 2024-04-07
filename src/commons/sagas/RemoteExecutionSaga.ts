@@ -1,7 +1,7 @@
 import { SlingClient } from '@sourceacademy/sling-client';
-import { assemble, compileFiles, Context } from 'js-slang';
-import { ExceptionError } from 'js-slang/dist/errors/errors';
-import { Chapter, Variant } from 'js-slang/dist/types';
+import { assemble, compileFiles, Context } from '@seancze/js-slang';
+import { ExceptionError } from '@seancze/js-slang/dist/errors/errors';
+import { Chapter, Variant } from '@seancze/js-slang/dist/types';
 import _ from 'lodash';
 import { SagaIterator } from 'redux-saga';
 import { call, put, race, select, take } from 'redux-saga/effects';
@@ -286,7 +286,7 @@ export function* remoteExecutionSaga(): SagaIterator {
       (state: OverallState) => state.workspaces[session.workspace].context
     );
     // clear the context of errors (note: the way this works is that the context
-    // is mutated by js-slang anyway, so it's ok to do it like this)
+    // is mutated by @seancze/js-slang anyway, so it's ok to do it like this)
     context.errors.length = 0;
     const compiled: MaybePromise<ReturnType<typeof compileFiles>> = yield call(
       compileFiles,

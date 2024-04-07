@@ -1,5 +1,5 @@
-import { Control, Stash } from 'js-slang/dist/cse-machine/interpreter';
-import { Frame } from 'js-slang/dist/types';
+import { Control, Stash } from '@seancze/js-slang/dist/cse-machine/interpreter';
+import { Frame } from '@seancze/js-slang/dist/types';
 import { KonvaEventObject } from 'konva/lib/Node';
 import React, { RefObject } from 'react';
 import { Layer, Rect, Stage } from 'react-konva';

@@ -1,4 +1,4 @@
-import { Chapter, Variant } from 'js-slang/dist/types';
+import { Chapter, Variant } from '@seancze/js-slang/dist/types';
 import { changeSideContentHeight } from 'src/commons/sideContent/SideContentActions';
 import { CHANGE_SIDE_CONTENT_HEIGHT } from 'src/commons/sideContent/SideContentTypes';
 

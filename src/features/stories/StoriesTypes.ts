@@ -1,4 +1,4 @@
-import { Context } from 'js-slang';
+import { Context } from '@seancze/js-slang';
 import { SideContentState } from 'src/commons/sideContent/SideContentTypes';
 import { DebuggerContext } from 'src/commons/workspace/WorkspaceTypes';
 
