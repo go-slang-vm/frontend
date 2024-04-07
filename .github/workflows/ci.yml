@@ -41,7 +41,6 @@ jobs:
         env:
           ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
         run: |
-          yarn add "js-slang@https://seancze:$ACCESS_TOKEN@github.com/seancze/cs4215-go-slang.git"
           yarn install --frozen-lockfile
       - name: Run command
         run: yarn run ${{ matrix.commands }}
