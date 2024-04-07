@@ -1,5 +1,3 @@
-import { tokenizer } from 'acorn';
-import { FSModule } from 'browserfs/dist/node/core/FS';
 import {
   Context,
   findDeclaration,
@@ -16,6 +14,8 @@ import { InterruptedError } from '@seancze/js-slang/dist/errors/errors';
 import { parse } from '@seancze/js-slang/dist/parser/parser';
 import { manualToggleDebugger } from '@seancze/js-slang/dist/stdlib/inspector';
 import { Chapter, Variant } from '@seancze/js-slang/dist/types';
+import { tokenizer } from 'acorn';
+import { FSModule } from 'browserfs/dist/node/core/FS';
 import { random } from 'lodash';
 import Phaser from 'phaser';
 import { SagaIterator } from 'redux-saga';
@@ -1128,7 +1128,7 @@ export function* evalCode(
   }
   async function wasm_compile_and_run(
     wasmCode: string,
-    wasmContext: Context,
+    wasmContext: any,
     isRepl: boolean
   ): Promise<Result> {
     return Sourceror.compile(wasmCode, wasmContext, isRepl)
