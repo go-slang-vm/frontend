@@ -1,7 +1,7 @@
 import { Card, Classes, Elevation, Pre } from '@blueprintjs/core';
-import classNames from 'classnames';
 import { parseError } from '@seancze/js-slang';
 import { stringify } from '@seancze/js-slang/dist/utils/stringify';
+import classNames from 'classnames';
 import React from 'react';
 
 import { Testcase, TestcaseTypes } from '../../assessment/AssessmentTypes';
