@@ -12,8 +12,6 @@
     "update-ui-snapshots": "Update UI test snapshots"
   },
   "scripts": {
-    "predeploy": "yarn run build",
-    "deploy": "gh-pages -d build -u 'github-actions-bot <support+actions@github.com>'",
     "analyze": "yarn build --stats; webpack-bundle-analyzer build/bundle-stats.json",
     "build": "cross-env EXTEND_ESLINT=true NODE_OPTIONS=--max_old_space_size=8192 craco build",
     "coverage": "./scripts/coverage-fix.sh do && craco test --coverage && ./scripts/coverage-fix.sh undo",

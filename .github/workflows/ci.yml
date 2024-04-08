@@ -20,32 +20,26 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
-        with:
-          token: ${{ secrets.ACCESS_TOKEN }}
-          persist-credentials: false
       - name: Install dependencies (apt)
         run: |
           sudo apt-get update && \
           sudo apt-get install -y --no-install-recommends \
           libxi-dev libgl1-mesa-dev
-      - name: Set environment variable
-        env:
-          ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
-        run: echo "ACCESS_TOKEN=$ACCESS_TOKEN" >> $GITHUB_ENV
       - name: Setup node
         uses: actions/setup-node@v4
         with:
           node-version: 20
           cache: yarn
+      - name: Install dependencies
+        run: |
+          yarn install
       - name: Publish github pages
         run: |
           git remote set-url origin https://git:${GITHUB_TOKEN}@github.com/seancze/cs4215-frontend.git
-          yarn install
           yarn run build
           npx gh-pages -d build -u "github-actions-bot <support+actions@github.com>"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
       - name: Coveralls - Upload test coverage report
         if: matrix.commands == 'test-coveralls'
         uses: coverallsapp/github-action@master
