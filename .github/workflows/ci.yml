@@ -16,7 +16,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        commands: [deploy]
+        commands: [build]
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -44,6 +44,12 @@ jobs:
           yarn install
       - name: Run command
         run: yarn run ${{ matrix.commands }}
+      - name: Publish github pages
+        run: |
+          git remote set-url origin https://git:${GITHUB_TOKEN}@github.com/seancze/cs4215-frontend.git
+          npx gh-pages -d build -u "github-actions-bot <support+actions@github.com>"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Coveralls - Upload test coverage report
         if: matrix.commands == 'test-coveralls'
         uses: coverallsapp/github-action@master
