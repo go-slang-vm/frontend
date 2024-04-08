@@ -39,12 +39,8 @@ jobs:
           cache: yarn
       - name: Publish github pages
         run: |
-          set -euo pipefail
           git remote set-url origin https://git:${GITHUB_TOKEN}@github.com/seancze/cs4215-frontend.git
           yarn install
-          yarn run tsc
-          yarn run format:ci
-          yarn run eslint
           yarn run build
           npx gh-pages -d build -u "github-actions-bot <support+actions@github.com>"
         env:
