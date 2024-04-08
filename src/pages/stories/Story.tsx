@@ -1,4 +1,4 @@
-import '@seancze/js-slang/dist/editors/ace/theme/source';
+import 'js-slang/dist/editors/ace/theme/source';
 
 import { Classes } from '@blueprintjs/core';
 import { TextInput } from '@tremor/react';

@@ -1,4 +1,4 @@
-import { Chapter, Variant } from '@seancze/js-slang/dist/types';
+import { Chapter, Variant } from 'js-slang/dist/types';
 
 import { addStoryEnv, clearStoryEnv, evalStory } from '../StoriesActions';
 import { ADD_STORY_ENV, CLEAR_STORY_ENV, EVAL_STORY } from '../StoriesTypes';

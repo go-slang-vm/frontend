@@ -1,7 +1,7 @@
 import { Classes, Pre } from '@blueprintjs/core';
 import { IconNames } from '@blueprintjs/icons';
-import { Chapter, Variant } from '@seancze/js-slang/dist/types';
 import classNames from 'classnames';
+import { Chapter, Variant } from 'js-slang/dist/types';
 import { useEffect, useMemo } from 'react';
 import { useDispatch } from 'react-redux';
 import { useParams } from 'react-router';

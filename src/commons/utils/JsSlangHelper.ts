@@ -1,10 +1,7 @@
 /* tslint:disable: ban-types*/
-import createSlangContext, {
-  defineBuiltin,
-  importBuiltins
-} from '@seancze/js-slang/dist/createContext';
-import { Chapter, Context, CustomBuiltIns, Value, Variant } from '@seancze/js-slang/dist/types';
-import { stringify } from '@seancze/js-slang/dist/utils/stringify';
+import createSlangContext, { defineBuiltin, importBuiltins } from 'js-slang/dist/createContext';
+import { Chapter, Context, CustomBuiltIns, Value, Variant } from 'js-slang/dist/types';
+import { stringify } from 'js-slang/dist/utils/stringify';
 import { difference, keys } from 'lodash';
 import CseMachine from 'src/features/cseMachine/CseMachine';
 
@@ -21,7 +18,7 @@ import DisplayBufferService from './DisplayBufferService';
 
 /**
  * Function that takes a value and displays it in the interpreter.
- * It uses the @seancze/js-slang stringify to convert values into a "nicer"
+ * It uses the js-slang stringify to convert values into a "nicer"
  * output. e.g. [1, 2, 3] displays as [1, 2, 3].
  * An action is dispatched using the redux store reference
  * within the global window object.
@@ -142,7 +139,7 @@ export const externalBuiltIns = {
 };
 
 /**
- * A wrapper around @seancze/js-slang's createContext. This
+ * A wrapper around js-slang's createContext. This
  * provides the original function with the required
  * externalBuiltIns, such as display and prompt.
  */
@@ -173,7 +170,7 @@ export function makeElevatedContext(context: Context) {
   // @ts-ignore
   const fakeFrame: { [key: string]: any } = new ProxyFrame();
   // Explanation: Proxy doesn't work for defineProperty in use-strict.
-  // The @seancze/js-slang will defineProperty on loadStandardLibraries
+  // The js-slang will defineProperty on loadStandardLibraries
   // Creating a raw JS object and setting prototype will allow defineProperty on the child
   // while reflection should work on parent.
 

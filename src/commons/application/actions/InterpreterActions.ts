@@ -1,5 +1,5 @@
 import { createAction } from '@reduxjs/toolkit';
-import { SourceError, Value } from '@seancze/js-slang/dist/types';
+import { SourceError, Value } from 'js-slang/dist/types';
 
 import { WorkspaceLocation } from '../../workspace/WorkspaceTypes';
 import {

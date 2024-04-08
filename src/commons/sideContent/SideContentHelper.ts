@@ -2,8 +2,8 @@ import * as bp3core from '@blueprintjs/core';
 import { TabId } from '@blueprintjs/core';
 import * as bp3icons from '@blueprintjs/icons';
 import * as bp3popover from '@blueprintjs/popover2';
-import * as jsslang from '@seancze/js-slang';
-import * as jsslangDist from '@seancze/js-slang/dist';
+import * as jsslang from 'js-slang';
+import * as jsslangDist from 'js-slang/dist';
 import lodash from 'lodash';
 import phaser from 'phaser';
 import React, { useCallback } from 'react';
@@ -35,8 +35,8 @@ const requireProvider = (x: string) => {
     '@blueprintjs/core': bp3core,
     '@blueprintjs/icons': bp3icons,
     '@blueprintjs/popover2': bp3popover,
-    '@seancze/js-slang': jsslang,
-    '@seancze/js-slang/dist': jsslangDist,
+    'js-slang': jsslang,
+    'js-slang/dist': jsslangDist,
     lodash,
     phaser
   };

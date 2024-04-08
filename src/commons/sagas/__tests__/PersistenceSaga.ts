@@ -1,4 +1,4 @@
-import { Chapter, Variant } from '@seancze/js-slang/dist/types';
+import { Chapter, Variant } from 'js-slang/dist/types';
 import { expectSaga } from 'redux-saga-test-plan';
 
 import { PLAYGROUND_UPDATE_PERSISTENCE_FILE } from '../../../features/playground/PlaygroundTypes';

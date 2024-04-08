@@ -1,4 +1,4 @@
-import { SourceDocumentation } from '@seancze/js-slang';
+import { SourceDocumentation } from 'js-slang';
 import { deviceTypes } from 'src/features/remoteExecution/RemoteExecutionTypes';
 
 import { externalLibraries } from '../application/types/ExternalTypes';

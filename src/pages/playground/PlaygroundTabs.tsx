@@ -1,5 +1,5 @@
 import { IconNames } from '@blueprintjs/icons';
-import { isStepperOutput } from '@seancze/js-slang/dist/stepper/stepper';
+import { isStepperOutput } from 'js-slang/dist/stepper/stepper';
 import { InterpreterOutput } from 'src/commons/application/ApplicationTypes';
 import Markdown from 'src/commons/Markdown';
 import SideContentRemoteExecution from 'src/commons/sideContent/content/remoteExecution/SideContentRemoteExecution';

@@ -2,7 +2,7 @@ import { Button, Menu, MenuItem } from '@blueprintjs/core';
 import { IconNames } from '@blueprintjs/icons';
 import { Tooltip2 } from '@blueprintjs/popover2';
 import { ItemListRenderer, ItemRenderer, Select } from '@blueprintjs/select';
-import { Chapter, Variant } from '@seancze/js-slang/dist/types';
+import { Chapter, Variant } from 'js-slang/dist/types';
 import React from 'react';
 
 import {

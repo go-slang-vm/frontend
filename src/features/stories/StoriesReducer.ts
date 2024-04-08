@@ -1,4 +1,4 @@
-import { stringify } from '@seancze/js-slang/dist/utils/stringify';
+import { stringify } from 'js-slang/dist/utils/stringify';
 import { Reducer } from 'redux';
 import { LOG_OUT } from 'src/commons/application/types/CommonsTypes';
 import { DebuggerContext } from 'src/commons/workspace/WorkspaceTypes';

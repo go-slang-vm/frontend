@@ -8,9 +8,9 @@ import {
   Instr,
   InstrType,
   UnOpInstr
-} from '@seancze/js-slang/dist/cse-machine/types';
-import { Environment, Value as StashValue } from '@seancze/js-slang/dist/types';
-import { astToString } from '@seancze/js-slang/dist/utils/astToString';
+} from 'js-slang/dist/cse-machine/types';
+import { Environment, Value as StashValue } from 'js-slang/dist/types';
+import { astToString } from 'js-slang/dist/utils/astToString';
 import { Group } from 'konva/lib/Group';
 import { Node } from 'konva/lib/Node';
 import { Shape } from 'konva/lib/Shape';
@@ -391,7 +391,7 @@ export const truncateText = (programStr: string, maxWidth: number, maxHeight: nu
 
 /**
  * Typeguard for Instr to distinguish between program statements and instructions.
- * The typeguard from @seancze/js-slang cannot be used due to Typescript raising some weird errors
+ * The typeguard from js-slang cannot be used due to Typescript raising some weird errors
  * with circular dependencies so it is redefined here.
  *
  * @param command A ControlItem

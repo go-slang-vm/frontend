@@ -1,7 +1,7 @@
-import { Chapter } from '@seancze/js-slang/dist/types';
 import { render } from '@testing-library/react';
 import { require as acequire } from 'ace-builds';
 import { FSModule } from 'browserfs/dist/node/core/FS';
+import { Chapter } from 'js-slang/dist/types';
 import { Provider } from 'react-redux';
 import { createMemoryRouter, RouteObject, RouterProvider } from 'react-router';
 import { Dispatch, Store } from 'redux';

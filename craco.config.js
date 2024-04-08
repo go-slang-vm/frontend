@@ -83,7 +83,7 @@ const cracoConfig = (module.exports = {
         })
       ];
 
-      // Workaround to suppress warnings caused by ts-morph in @seancze/js-slang
+      // Workaround to suppress warnings caused by ts-morph in js-slang
       webpackConfig.module.noParse = /node_modules\/@ts-morph\/common\/dist\/typescript\.js$/;
 
       return webpackConfig;
@@ -96,14 +96,14 @@ const cracoConfig = (module.exports = {
         // '[/\\\\]node_modules[/\\\\]
         //  (?!
         //  (   @ion-phaser[/\\\\]react[/\\\\.*]    )|
-        //  (   @seancze/js-slang[/\\\\.*]                   )|
+        //  (   js-slang[/\\\\.*]                   )|
         //  (   array-move[/\\\\.*]                 )|
         //      ...
         //  (   comma-separated-tokens[/\\\\.*]   )
         //  ).*.(js|jsx|ts|tsx)$'
         ignoreModulePaths(
           '@ion-phaser/react',
-          '@seancze/js-slang',
+          'js-slang',
           'array-move',
           'konva',
           'react-konva',

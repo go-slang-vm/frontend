@@ -1,13 +1,6 @@
-import {
-  Context,
-  IOptions,
-  Result,
-  resume,
-  runFilesInContext,
-  runInContext
-} from '@seancze/js-slang';
-import createContext from '@seancze/js-slang/dist/createContext';
-import { Chapter, Finished, Variant } from '@seancze/js-slang/dist/types';
+import { Context, IOptions, Result, resume, runFilesInContext, runInContext } from 'js-slang';
+import createContext from 'js-slang/dist/createContext';
+import { Chapter, Finished, Variant } from 'js-slang/dist/types';
 import { call } from 'redux-saga/effects';
 import { expectSaga } from 'redux-saga-test-plan';
 import * as matchers from 'redux-saga-test-plan/matchers';

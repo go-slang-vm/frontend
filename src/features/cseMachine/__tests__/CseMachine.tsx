@@ -1,5 +1,5 @@
-import { runInContext } from '@seancze/js-slang/dist/';
-import createContext from '@seancze/js-slang/dist/createContext';
+import { runInContext } from 'js-slang/dist/';
+import createContext from 'js-slang/dist/createContext';
 
 import { ControlItemComponent } from '../compactComponents/ControlItemComponent';
 import { StashItemComponent } from '../compactComponents/StashItemComponent';

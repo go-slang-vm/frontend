@@ -1,4 +1,4 @@
-import { stringify } from '@seancze/js-slang/dist/utils/stringify';
+import { stringify } from 'js-slang/dist/utils/stringify';
 
 import {
   IMCQQuestion,

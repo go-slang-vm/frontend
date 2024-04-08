@@ -1,6 +1,6 @@
 import { ButtonGroup, Slider } from '@blueprintjs/core';
 import { IconNames } from '@blueprintjs/icons';
-import { Chapter } from '@seancze/js-slang/dist/types';
+import { Chapter } from 'js-slang/dist/types';
 import React from 'react';
 
 import {

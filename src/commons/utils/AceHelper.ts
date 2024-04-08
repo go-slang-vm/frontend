@@ -1,8 +1,5 @@
-import {
-  HighlightRulesSelector,
-  ModeSelector
-} from '@seancze/js-slang/dist/editors/ace/modes/source';
-import { Chapter, Variant } from '@seancze/js-slang/dist/types';
+import { HighlightRulesSelector, ModeSelector } from 'js-slang/dist/editors/ace/modes/source';
+import { Chapter, Variant } from 'js-slang/dist/types';
 
 import { HighlightRulesSelector_native } from '../../features/fullJS/fullJSHighlight';
 import { Documentation } from '../documentation/Documentation';

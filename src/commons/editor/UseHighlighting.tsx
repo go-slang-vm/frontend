@@ -1,5 +1,5 @@
-import { createContext, getAllOccurrencesInScope, getScope } from '@seancze/js-slang';
 import { Ace, Range as AceRange } from 'ace-builds';
+import { createContext, getAllOccurrencesInScope, getScope } from 'js-slang';
 import React from 'react';
 
 import { EditorHook } from './Editor';

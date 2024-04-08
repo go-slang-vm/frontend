@@ -13,7 +13,7 @@ import {
   TextArea
 } from '@blueprintjs/core';
 import { IconNames } from '@blueprintjs/icons';
-import { Chapter, Variant } from '@seancze/js-slang/dist/types';
+import { Chapter, Variant } from 'js-slang/dist/types';
 import React from 'react';
 import { useDispatch } from 'react-redux';
 import { createCourse } from 'src/features/academy/AcademyActions';

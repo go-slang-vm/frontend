@@ -1,5 +1,5 @@
-import { Stash } from '@seancze/js-slang/dist/cse-machine/interpreter';
-import { Value } from '@seancze/js-slang/dist/types';
+import { Stash } from 'js-slang/dist/cse-machine/interpreter';
+import { Value } from 'js-slang/dist/types';
 import { KonvaEventObject } from 'konva/lib/Node';
 import React from 'react';
 import { Group } from 'react-konva';

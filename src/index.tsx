@@ -1,7 +1,7 @@
 import 'src/styles/index.scss';
 
 import { Button } from '@blueprintjs/core';
-import { setModulesStaticURL } from '@seancze/js-slang/dist/modules/moduleLoader';
+import { setModulesStaticURL } from 'js-slang/dist/modules/moduleLoader';
 import * as Sentry from '@sentry/browser';
 import { createRoot } from 'react-dom/client';
 import { Provider } from 'react-redux';

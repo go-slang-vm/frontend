@@ -7,12 +7,9 @@ import { MapDispatchToProps, connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 
 import classNames from 'classnames';
-import {
-  HighlightRulesSelector,
-  ModeSelector
-} from '@seancze/js-slang/dist/editors/ace/modes/source';
-import '@seancze/js-slang/dist/editors/ace/theme/source';
-import { IStepperPropContents } from '@seancze/js-slang/dist/stepper/stepper';
+import { HighlightRulesSelector, ModeSelector } from 'js-slang/dist/editors/ace/modes/source';
+import 'js-slang/dist/editors/ace/theme/source';
+import { IStepperPropContents } from 'js-slang/dist/stepper/stepper';
 import { SideContentLocation, SideContentType } from '../SideContentTypes';
 import { beginAlertSideContent } from '../SideContentActions';
 

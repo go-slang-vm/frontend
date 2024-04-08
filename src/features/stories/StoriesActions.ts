@@ -1,4 +1,4 @@
-import { Chapter, Context, SourceError, Value, Variant } from '@seancze/js-slang/dist/types';
+import { Chapter, Context, SourceError, Value, Variant } from 'js-slang/dist/types';
 import { StoriesRole } from 'src/commons/application/ApplicationTypes';
 import { action } from 'typesafe-actions';
 
