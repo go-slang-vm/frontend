@@ -25,19 +25,23 @@ The Source Academy (<https://sourceacademy.org/>) is an immersive online experie
 1. Install Python (known working versions: `2.7`, `3.8`, `3.9`, `3.10`) – **Note: Python `3.11` does not work**
 
 1. Clone this repository and navigate to it using your command line
+2. Follow the steps listed [here](https://github.com/seancze/cs4215-go-slang?tab=readme-ov-file#using-your-js-slang-in-your-local-source-academy) to install `js-slang` with support for `go-slang`
 
-1. Run `yarn install` to install dependencies.
+3. Run `yarn install` to install all other dependencies.
 
    - If you are on Ubuntu and encounter the error message: `No such file or directory: 'install'`, you might be running the incorrect "yarn" from the cmdtest testing suite instead of the JavaScript package manager of the same name. Refer to this [StackOverflow post](https://stackoverflow.com/questions/46013544/yarn-install-command-error-no-such-file-or-directory-install).
    - If you are on the new M1 or M2 Mac chips, and encounter an error while installing `canvas`, refer to [this documentation](https://github.com/Automattic/node-canvas/wiki/Installation:-Mac-OS-X#homebrew) to install the requisite dependencies first.
 
-1. Run `yarn run start` to start the server at `localhost:8000`. **It might take a couple of minutes for the server to start.**
+4. Run `yarn run start` to start the server at `localhost:8000`. **It might take a couple of minutes for the server to start.**
 
-1. Point your browser to `http://localhost:8000` to see your local Source Academy.
+5. Point your browser to `http://localhost:8000` to see your local Source Academy.
 
-In this edition, you will only see the Playground with all its tools, but no login options or homework submission features.
+   - In this edition, you will only see the Playground with all its tools, but no login options or homework submission features.
+   - If you wish to set up the GitHub or Google Drive integrations, copy the `.env.example` file as `.env` and refer to [_Setting up your environment_](#setting-up-your-environment) below for the relevant configuration options.
 
-If you wish to set up the GitHub or Google Drive integrations, copy the `.env.example` file as `.env` and refer to [_Setting up your environment_](#setting-up-your-environment) below for the relevant configuration options.
+6. (OPTIONAL) To deploy onto github pages, run `yarn run deploy`
+   - If you are deploying on your own repository, ensure that you have enabled the Github Action for creating a Github Page. Follow [this guide](https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-github-pages-site#creating-your-site) for more information.
+   - NOTE: **The `ci.yml` file does NOT work out of the box**. To make it work, update `js-slang` in `package.json` to an actual npm package. In other words, you will have to publish your own custom npm package if you would like the `ci.yml` workflow to work as intended.
 
 ### Installation of [Source Academy @ NUS](https://sourceacademy.nus.edu.sg)
 
