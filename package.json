@@ -12,6 +12,8 @@
     "update-ui-snapshots": "Update UI test snapshots"
   },
   "scripts": {
+    "predeploy": "yarn run build",
+    "deploy": "gh-pages -d build -u 'github-actions-bot <support+actions@github.com>'",
     "analyze": "yarn build --stats; webpack-bundle-analyzer build/bundle-stats.json",
     "build": "cross-env EXTEND_ESLINT=true NODE_OPTIONS=--max_old_space_size=8192 craco build",
     "coverage": "./scripts/coverage-fix.sh do && craco test --coverage && ./scripts/coverage-fix.sh undo",
@@ -34,7 +36,7 @@
     "@blueprintjs/select": "^5.0.0",
     "@octokit/rest": "^20.0.0",
     "@reduxjs/toolkit": "^1.9.7",
-    "js-slang": "git+https://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@github.com/seancze/cs4215-go-slang.git",
+    "js-slang": "^1.0.46",
     "@sentry/browser": "^7.57.0",
     "@sourceacademy/sharedb-ace": "^2.0.2",
     "@sourceacademy/sling-client": "^0.1.0",

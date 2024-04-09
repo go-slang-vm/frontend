@@ -38,7 +38,6 @@ jobs:
       - name: Publish github pages
         run: |
           git remote set-url origin https://git:${GITHUB_TOKEN}@github.com/seancze/cs4215-frontend.git
-          yarn add "js-slang@https://seancze:$ACCESS_TOKEN@github.com/seancze/cs4215-go-slang.git"
           yarn run build
           npx gh-pages -d build -u "github-actions-bot <support+actions@github.com>"
         env:
