@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/cs4215-frontend/static/css/main.c110e68d.css",
-    "main.js": "/cs4215-frontend/static/js/main.120e05cb.js",
+    "main.js": "/cs4215-frontend/static/js/main.a215c80c.js",
     "blueprint-icons-all-paths-loader.js": "/cs4215-frontend/static/js/blueprint-icons-all-paths-loader.d411140c.chunk.js",
     "blueprint-icons-split-paths-by-size-loader.js": "/cs4215-frontend/static/js/blueprint-icons-split-paths-by-size-loader.ac245711.chunk.js",
     "static/css/1296.80bdc370.chunk.css": "/cs4215-frontend/static/css/1296.80bdc370.chunk.css",
@@ -1062,7 +1062,7 @@
     "d.js": "/cs4215-frontend/c98e74fc97b04fe8bf43dcdff549afcf.js",
     "mode-text.js": "/cs4215-frontend/0ffb18fb70c87335edee31a479f58a43.js",
     "main.c110e68d.css.map": "/cs4215-frontend/static/css/main.c110e68d.css.map",
-    "main.120e05cb.js.map": "/cs4215-frontend/static/js/main.120e05cb.js.map",
+    "main.a215c80c.js.map": "/cs4215-frontend/static/js/main.a215c80c.js.map",
     "blueprint-icons-all-paths-loader.d411140c.chunk.js.map": "/cs4215-frontend/static/js/blueprint-icons-all-paths-loader.d411140c.chunk.js.map",
     "blueprint-icons-split-paths-by-size-loader.ac245711.chunk.js.map": "/cs4215-frontend/static/js/blueprint-icons-split-paths-by-size-loader.ac245711.chunk.js.map",
     "1296.80bdc370.chunk.css.map": "/cs4215-frontend/static/css/1296.80bdc370.chunk.css.map",
@@ -1608,6 +1608,6 @@
   },
   "entrypoints": [
     "static/css/main.c110e68d.css",
-    "static/js/main.120e05cb.js"
+    "static/js/main.a215c80c.js"
   ]
 }
