@@ -345,14 +345,37 @@ export const defaultPlayground: PlaygroundState = {
 };
 
 export const defaultEditorValue = `// Type your program in here!
-func main() (int) {
-  var y int = 1
-  {
-    y int := 2
-    return y
-  }
+// EXAMPLE CODE SNIPPETS
+
+// FACTORIAL FUNCTION
+func fact(n int) (int) {
+    return fact_iter(n,1,1)
 }
-`;
+func fact_iter(n, i, acc int) (int) {
+    if i > n {
+        return acc
+    } else {
+        return fact_iter(n,i+1,acc*i)
+    }
+}
+
+// WHILE LOOP
+func while_loop() (int) {
+    var x int = 0
+    var y int = 0
+    for x < 10 {
+        x = x + 1
+        y = y + x
+    }
+    return y
+}
+      
+func main() {
+    Println("Factorial function: ")
+    Println(fact(5))
+    Println("While loop: ")
+    Println(while_loop())
+}`;
 
 /**
  * Create a default IWorkspaceState for 'resetting' a workspace.
