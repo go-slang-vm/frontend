@@ -5,12 +5,11 @@ import {
   findDeclaration,
   getNames,
   interrupt,
-  Result,
   resume,
   runFilesInContext,
   runInContext
 } from 'js-slang';
-import { ACORN_PARSE_OPTIONS, TRY_AGAIN } from 'js-slang/dist/constants';
+import { ACORN_PARSE_OPTIONS } from 'js-slang/dist/constants';
 import { defineSymbol } from 'js-slang/dist/createContext';
 import { InterruptedError } from 'js-slang/dist/errors/errors';
 import { parse } from 'js-slang/dist/parser/parser';
@@ -20,7 +19,6 @@ import { random } from 'lodash';
 import Phaser from 'phaser';
 import { SagaIterator } from 'redux-saga';
 import { call, put, race, select, StrictEffect, take } from 'redux-saga/effects';
-import * as Sourceror from 'sourceror';
 import CseMachine from 'src/features/cseMachine/CseMachine';
 import { notifyStoriesEvaluated } from 'src/features/stories/StoriesActions';
 import { EVAL_STORY } from 'src/features/stories/StoriesTypes';
@@ -64,7 +62,6 @@ import {
   visualizeCseMachine
 } from '../utils/JsSlangHelper';
 import { showSuccessMessage, showWarningMessage } from '../utils/notifications/NotificationsHelper';
-import { makeExternalBuiltins as makeSourcerorExternalBuiltins } from '../utils/SourcerorHelper';
 import { showFullJSDisclaimer, showFullTSDisclaimer } from '../utils/WarningDialogHelper';
 import { notifyProgramEvaluated } from '../workspace/WorkspaceActions';
 import {
@@ -596,7 +593,7 @@ export default function* WorkspaceSaga(): SagaIterator {
 }
 
 let lastDebuggerResult: any;
-let lastNonDetResult: Result;
+
 function* updateInspector(workspaceLocation: WorkspaceLocation): SagaIterator {
   try {
     const row = lastDebuggerResult.context.runtime.nodes[0].loc.start.line - 1;
@@ -1100,60 +1097,7 @@ export function* evalCode(
 
   const entrypointCode = files[entrypointFilePath];
 
-  function call_variant(variant: Variant) {
-    if (variant === Variant.NON_DET) {
-      return entrypointCode.trim() === TRY_AGAIN
-        ? call(resume, lastNonDetResult)
-        : call(runFilesInContext, files, entrypointFilePath, context, {
-            executionMethod: 'interpreter',
-            originalMaxExecTime: execTime,
-            stepLimit: stepLimit,
-            useSubst: substActiveAndCorrectChapter,
-            envSteps: currentStep
-          });
-    } else if (variant === Variant.LAZY) {
-      return call(runFilesInContext, files, entrypointFilePath, context, {
-        scheduler: 'preemptive',
-        originalMaxExecTime: execTime,
-        stepLimit: stepLimit,
-        useSubst: substActiveAndCorrectChapter,
-        envSteps: currentStep
-      });
-    } else if (variant === Variant.WASM) {
-      // Note: WASM does not support multiple file programs.
-      return call(wasm_compile_and_run, entrypointCode, context, actionType === EVAL_REPL);
-    } else {
-      throw new Error('Unknown variant: ' + variant);
-    }
-  }
-  async function wasm_compile_and_run(
-    wasmCode: string,
-    wasmContext: Context,
-    isRepl: boolean
-  ): Promise<Result> {
-    return Sourceror.compile(wasmCode, wasmContext, isRepl)
-      .then((wasmModule: WebAssembly.Module) => {
-        const transcoder = new Sourceror.Transcoder();
-        return Sourceror.run(
-          wasmModule,
-          Sourceror.makePlatformImports(makeSourcerorExternalBuiltins(wasmContext), transcoder),
-          transcoder,
-          wasmContext,
-          isRepl
-        );
-      })
-      .then(
-        (returnedValue: any): Result => ({ status: 'finished', context, value: returnedValue }),
-        (e: any): Result => {
-          console.log(e);
-          return { status: 'error' };
-        }
-      );
-  }
-
   const isNonDet: boolean = context.variant === Variant.NON_DET;
-  const isLazy: boolean = context.variant === Variant.LAZY;
-  const isWasm: boolean = context.variant === Variant.WASM;
 
   // Handles `console.log` statements in fullJS
   const detachConsole: () => void =
@@ -1165,8 +1109,6 @@ export function* evalCode(
     result:
       actionType === DEBUG_RESUME
         ? call(resume, lastDebuggerResult)
-        : isNonDet || isLazy || isWasm
-        ? call_variant(context.variant)
         : call(
             runFilesInContext,
             isFolderModeEnabled
@@ -1249,7 +1191,6 @@ export function* evalCode(
     if (result.value === 'cut') {
       result.value = undefined;
     }
-    lastNonDetResult = result;
   }
 
   yield* dumpDisplayBuffer(workspaceLocation, isStoriesBlock, storyEnv);

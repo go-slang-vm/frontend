@@ -344,11 +344,6 @@ const NavigationBar: React.FC = () => {
 
 const playgroundOnlyNavbarLeftInfo: NavbarEntryInfo[] = [
   {
-    to: '/playground',
-    icon: IconNames.CODE,
-    text: 'Playground'
-  },
-  {
     to: '/githubassessments',
     icon: IconNames.BRIEFCASE,
     text: 'Classroom',

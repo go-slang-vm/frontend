@@ -2,6 +2,7 @@
   "private": true,
   "name": "frontend",
   "version": "1.4.3",
+  "homepage": "https://seancze.github.io/cs4215-frontend/",
   "scripts-info": {
     "analyze": "Analyze bundle size breakdown",
     "format": "Format source code",
@@ -11,6 +12,8 @@
     "update-ui-snapshots": "Update UI test snapshots"
   },
   "scripts": {
+    "predeploy": "yarn run build",
+    "deploy": "gh-pages -d build -u 'github-actions-bot <support+actions@github.com>'",
     "analyze": "yarn build --stats; webpack-bundle-analyzer build/bundle-stats.json",
     "build": "cross-env EXTEND_ESLINT=true NODE_OPTIONS=--max_old_space_size=8192 craco build",
     "coverage": "./scripts/coverage-fix.sh do && craco test --coverage && ./scripts/coverage-fix.sh undo",
@@ -33,6 +36,7 @@
     "@blueprintjs/select": "^5.0.0",
     "@octokit/rest": "^20.0.0",
     "@reduxjs/toolkit": "^1.9.7",
+    "js-slang": "^1.0.46",
     "@sentry/browser": "^7.57.0",
     "@sourceacademy/sharedb-ace": "^2.0.2",
     "@sourceacademy/sling-client": "^0.1.0",
@@ -48,8 +52,8 @@
     "classnames": "^2.3.2",
     "flexboxgrid": "^6.3.1",
     "flexboxgrid-helpers": "^1.1.3",
+    "gh-pages": "^6.1.1",
     "hastscript": "^9.0.0",
-    "js-slang": "^1.0.46",
     "js-yaml": "^4.1.0",
     "konva": "^9.2.0",
     "lodash": "^4.17.21",
@@ -86,6 +90,7 @@
     "redux-mock-store": "^1.5.4",
     "redux-saga": "^1.2.3",
     "rehype-react": "^8.0.0",
+    "serve": "^14.2.1",
     "showdown": "^2.1.0",
     "sourceror": "^0.8.5",
     "typesafe-actions": "^5.1.0",
