@@ -68,7 +68,7 @@ config:
 ---
 \`\`\`
 
-The current valid CHAPTER/VARIANT combinations can be found [here](https://github.com/source-academy/js-slang#usage).
+The current valid CHAPTER/VARIANT combinations can be found [here](https://github.com/go-slang-vm/go-slang#usage).
 
 ## Adding New Environments
 
