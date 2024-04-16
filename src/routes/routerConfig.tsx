@@ -69,10 +69,10 @@ export const playgroundOnlyRouterConfig: RouteObject[] = [
     children: [
       {
         path: '',
-        element: <Navigate to="/cs4215-frontend" replace />
+        element: <Navigate to="/frontend" replace />
       },
       {
-        path: 'cs4215-frontend',
+        path: 'frontend',
         lazy: Playground
       },
       ...commonChildrenRoutes,

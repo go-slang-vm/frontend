@@ -25,7 +25,7 @@ The Source Academy (<https://sourceacademy.org/>) is an immersive online experie
 1. Install Python (known working versions: `2.7`, `3.8`, `3.9`, `3.10`) – **Note: Python `3.11` does not work**
 
 1. Clone this repository and navigate to it using your command line
-2. Follow the steps listed [here](https://github.com/seancze/cs4215-go-slang?tab=readme-ov-file#using-your-js-slang-in-your-local-source-academy) to install `js-slang` with support for `go-slang`
+2. Follow the steps listed [here](https://github.com/go-slang-vm/go-slang?tab=readme-ov-file#using-your-js-slang-in-your-local-source-academy) to install `js-slang` with support for `go-slang`
 
 3. Run `yarn install` to install all other dependencies.
 

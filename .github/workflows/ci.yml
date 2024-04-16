@@ -37,7 +37,7 @@ jobs:
           yarn install
       - name: Publish github pages
         run: |
-          git remote set-url origin https://git:${GITHUB_TOKEN}@github.com/seancze/cs4215-frontend.git
+          git remote set-url origin https://git:${GITHUB_TOKEN}@github.com/go-slang-vm/frontend.git
           yarn run build
           npx gh-pages -d build -u "github-actions-bot <support+actions@github.com>"
         env:
