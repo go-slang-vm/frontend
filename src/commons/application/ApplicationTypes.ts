@@ -348,7 +348,7 @@ export const defaultEditorValue = `// Type your program in here!
 // EXAMPLE CODE SNIPPETS
 
 // FACTORIAL FUNCTION
-func fact(n int) (int) {
+func test_fact(n int) (int) {
     return fact_iter(n,1,1)
 }
 func fact_iter(n, i, acc int) (int) {
@@ -360,7 +360,7 @@ func fact_iter(n, i, acc int) (int) {
 }
 
 // WHILE LOOP
-func while_loop() (int) {
+func test_while_loop() (int) {
     var x int = 0
     var y int = 0
     for x < 10 {
@@ -369,12 +369,83 @@ func while_loop() (int) {
     }
     return y
 }
+
+// UNBUFFERED CHANNEL
+func write_hello_world_to(output chan string) {
+    output <- "Hello World"
+}
+func test_unbuffered_channel() {
+    input chan string := make(chan string)
+    go write_hello_world_to(input)
+    text string := <-input
+    Println(text)
+}
+
+// WAIT GROUP
+func worker(id int) int {
+    // sleep is used to simulate an I/O intensive task
+    sleep(500)
+    return id * 2
+}
+
+func test_wait_group() int {
+    var wg WaitGroup = waitgroup
+    res int := 0
+    i int := 0
+    for i < 3 {
+        i = i + 1
+        Add(wg, 1)
+        go func() {
+            res = res + worker(i)
+            Done(wg)
+        }()
+        // before starting the next go routine, we wait for the previous one to finish
+        Wait(wg)
+    }
+    return res
+}
+
+// MUTEX
+func inc(x Mutex, c chan int) {
+    Lock(x)
+    y int := <- c
+    Println(y)
+    Unlock(x)
+}
+func inc2(c chan int) {
+    sleep(5000)
+    c <- 1
+}
+func test_mutex() {
+    var x Mutex = mutex
+    var c chan int = make(chan int)
+    go inc(x,c)
+    go inc2(c)
+    sleep(50)
+    Lock(x)
+    Unlock(x)
+}
+
+// PREPROCESSOR REORDERING
+var x int = test_preprocessor()
+func test_preprocessor() int {
+    return y
+}
+var y int = 3
       
 func main() {
     Println("Factorial function: ")
-    Println(fact(5))
+    Println(test_fact(5))
     Println("While loop: ")
-    Println(while_loop())
+    Println(test_while_loop())
+    Println("Unbuffered channel: ")
+    test_unbuffered_channel()
+    Println("Wait group: ")
+    Println(test_wait_group())
+    Println("Preprocessor: ")
+    Println(test_preprocessor())
+    Println("Mutex: ")
+    test_mutex()
 }`;
 
 /**
